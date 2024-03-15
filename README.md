@@ -14,7 +14,7 @@ git clone https://github.com/jasonz-12/whisper-live.git
 * Install the requirements file
 ```
 cd whisper-live
-pip install requirements.txt
+pip install -r requirements.txt 
 ```
 * Run the main python file
 ```
