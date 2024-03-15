@@ -1,3 +1,3 @@
 numpy
 sounddevice
-whisper
+openai-whisper
