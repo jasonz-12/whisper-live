@@ -4,7 +4,7 @@ import whisper
 import queue
 
 # Parameters
-model_type = "base"  # Model type, can be tiny, base, small, medium, or large
+model_type = "small.en"  # Model type, can be tiny, base, small, medium, or large
 sample_rate = 16000  # Whisper model's expected sample rate
 chunk_size = 2048  # Size of chunks to read at a time (in samples)
 
@@ -35,7 +35,7 @@ try:
                 audio_float32 = audio_buffer.astype(np.float32) / 32768.0
                 
                 # Transcribe the audio chunk
-                result = model.transcribe(audio_float32, temperature=0)
+                result = model.transcribe(audio_float32, temperature=0, language="en")
                 print(result["text"])
                 
                 # Clear the buffer
